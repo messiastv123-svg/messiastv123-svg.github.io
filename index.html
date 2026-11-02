@@ -3,29 +3,78 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Orion Studio</title>
+<title>Orion Studio – Kanal-Studio für die eigenen YouTube-, Instagram- und TikTok-Kanäle</title>
+<meta name="description" content="Orion Studio ist ein privates Werkzeug, mit dem der Betreiber seine eigenen Videos auf seine eigenen Kanäle hochlädt und deren Statistik ansieht.">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
 <style>
-  :root { color-scheme: light dark; --text: #1d1d21; --leise: #5c5f66; --grund: #f6f6f8; --karte: #fff; --akzent: #6b5bd6; }
-  @media (prefers-color-scheme: dark) { :root { --text: #ececf0; --leise: #a3a6ad; --grund: #141417; --karte: #1e1f23; --akzent: #b4a5ff; } }
+  :root { color-scheme: light dark; --text: #1d1d21; --leise: #5c5f66; --grund: #f6f6f8; --karte: #fff; --rand: #e3e3ea; --akzent: #6b5bd6; }
+  @media (prefers-color-scheme: dark) { :root { --text: #ececf0; --leise: #a3a6ad; --grund: #141417; --karte: #1e1f23; --rand: #2c2d33; --akzent: #b4a5ff; } }
   body { margin: 0; background: var(--grund); color: var(--text); font: 16px/1.6 system-ui, sans-serif; }
-  main { max-width: 680px; margin: 0 auto; padding: 48px 16px; }
-  h1 { font-size: 32px; margin: 0 0 8px; }
-  p { color: var(--leise); }
-  .karte { background: var(--karte); border-radius: 16px; padding: 20px 22px; margin-top: 24px; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 16px; }
+  .kopf { display: flex; align-items: center; gap: 18px; }
+  .kopf img { width: 72px; height: 72px; border-radius: 18px; flex: none; }
+  h1 { font-size: 34px; margin: 0; line-height: 1.15; }
+  .unter { margin: 4px 0 0; color: var(--leise); }
+  h2 { font-size: 20px; margin: 36px 0 8px; }
+  p, li { color: var(--leise); }
+  b, strong { color: var(--text); }
+  .karte { background: var(--karte); border: 1px solid var(--rand); border-radius: 16px; padding: 18px 22px; margin-top: 16px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--rand); vertical-align: top; }
+  th { color: var(--text); }
+  td { color: var(--leise); }
+  code { font-size: 13px; overflow-wrap: anywhere; }
   a { color: var(--akzent); }
+  .en { margin-top: 48px; padding-top: 8px; border-top: 1px solid var(--rand); }
   footer { margin-top: 40px; font-size: 14px; color: var(--leise); }
 </style>
 </head>
 <body>
 <main>
-  <h1>Orion Studio</h1>
-  <p>Orion Studio ist ein privates Werkzeug, mit dem der Betreiber seine eigenen Social-Media-Kanäle (YouTube, Instagram, TikTok) verwaltet: Videos planen, hochladen und die Statistik der eigenen Kanäle ansehen.</p>
-  <div class="karte">
-    <b>Für wen?</b>
-    <p>Nur für die eigenen Kanäle des Betreibers. Orion Studio ist kein öffentlicher Dienst, man kann sich nicht registrieren.</p>
+  <div class="kopf">
+    <img src="logo-120.png" alt="Logo von Orion Studio" width="72" height="72">
+    <div>
+      <h1>Orion Studio</h1>
+      <p class="unter">Das private Kanal-Studio von Curly (messiastv123)</p>
+    </div>
   </div>
+
+  <p>Orion Studio ist ein privates Werkzeug, mit dem der Betreiber <b>seine eigenen Videos auf seine eigenen Kanäle</b> bei YouTube, Instagram und TikTok hochlädt, Sendezeiten plant und die Statistik dieser eigenen Kanäle ansieht. Orion Studio ist kein öffentlicher Dienst: Man kann sich nicht registrieren, und es werden keine Konten oder Daten anderer Personen verarbeitet.</p>
+
+  <h2>Was Orion Studio macht</h2>
+  <ul>
+    <li>Fertige Videos des Betreibers zur geplanten Uhrzeit auf seinen eigenen Kanal hochladen.</li>
+    <li>Aufrufe, Likes und Abonnenten der eigenen Kanäle abrufen, damit der Betreiber sieht, welche Videos und Uhrzeiten gut laufen.</li>
+    <li>Nichts anderes: kein Lesen fremder Kanäle, keine Kommentare oder Nachrichten im Namen des Betreibers, keine Werbung.</li>
+  </ul>
+
+  <h2>Welche Google-Daten Orion Studio nutzt</h2>
+  <div class="karte">
+    <table>
+      <tr><th>Berechtigung</th><th>Wofür</th></tr>
+      <tr><td><code>youtube.upload</code><br>Videos hochladen</td><td>Lädt die eigenen Videos des Betreibers zur geplanten Zeit auf seinen eigenen YouTube-Kanal hoch (Titel, Beschreibung, Hashtags).</td></tr>
+      <tr><td><code>youtube.readonly</code><br>YouTube-Konto ansehen</td><td>Liest Name und Bild des eigenen Kanals sowie Liste und Aufrufe der eigenen Videos, um die Statistik anzuzeigen.</td></tr>
+    </table>
+  </div>
+  <p>Die Daten bleiben auf dem privaten Server des Betreibers, werden nicht verkauft, nicht für Werbung genutzt und nicht an Dritte weitergegeben. Der Zugriff lässt sich jederzeit unter <a href="https://myaccount.google.com/permissions">Google-Kontoberechtigungen</a> widerrufen.</p>
+  <p><b>Die Nutzung und Weitergabe von Informationen, die Orion Studio über Google-APIs erhält, hält sich an die <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, einschließlich der Anforderungen zur eingeschränkten Nutzung (Limited Use).</b></p>
+
+  <section class="en" lang="en">
+    <h2>English</h2>
+    <p><b>Orion Studio</b> is a private tool operated by Curly (messiastv123). It is used only by its operator to upload <b>his own videos to his own channels</b> on YouTube, Instagram and TikTok at scheduled times and to view the statistics of these channels. It is not a public service; nobody else can sign up, and no data of other people is processed.</p>
+    <div class="karte">
+      <table>
+        <tr><th>Scope</th><th>Why Orion Studio needs it</th></tr>
+        <tr><td><code>https://www.googleapis.com/auth/youtube.upload</code></td><td>Upload the operator's own videos (title, description, hashtags) to his own YouTube channel at the scheduled time.</td></tr>
+        <tr><td><code>https://www.googleapis.com/auth/youtube.readonly</code></td><td>Read the own channel's name and picture and the list and view counts of the own videos to show statistics.</td></tr>
+      </table>
+    </div>
+    <p>Data stays on the operator's private server. It is never sold, never used for advertising and never shared with third parties. Access can be revoked at any time at <a href="https://myaccount.google.com/permissions">Google Account permissions</a>.</p>
+    <p><b>Orion Studio's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</b></p>
+  </section>
+
   <footer>
-    <a href="datenschutz.html">Datenschutzerklärung</a> · <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a> · Kontakt: icyryni@gmail.com
+    <a href="datenschutz.html">Datenschutzerklärung / Privacy Policy</a> · <a href="nutzungsbedingungen.html">Nutzungsbedingungen / Terms of Service</a> · Kontakt / Contact: <a href="mailto:icyryni@gmail.com">icyryni@gmail.com</a>
   </footer>
 </main>
 </body>
